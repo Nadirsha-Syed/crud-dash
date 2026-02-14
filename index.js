@@ -18,6 +18,12 @@ let posts = [
     { id:uuidv4(),username: 'John', content: 'This is a sample post.'}
 ];
 
+
+app.get('/', (req, res) => {
+    res.redirect('/posts');
+});
+
+
 app.get('/posts', (req, res) => {
     res.render('index.ejs', { posts: posts }); 
 });
