@@ -1,0 +1,152 @@
+/* 1. Global Reset */
+* {
+    box-sizing: border-box; /* Fixes all "fitting" and overflow issues */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    line-height: 1.5;
+}
+
+/* 2. Main Layout Container */
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Header Styling for "CRUD Dash" */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #111;
+    padding-bottom: 12px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+h1 span {
+    font-weight: 300;
+    color: #888;
+}
+
+h2 {
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+/* 3. The Card (Boundary) */
+.post {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    display: flow-root; /* Keeps internal forms/buttons inside the box */
+}
+
+/* 4. Typography & Meta */
+.user {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.content {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+.meta-info {
+    font-size: 0.75rem;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+/* 5. Inputs & Forms */
+input[type="text"], 
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #fafafa;
+    margin-bottom: 20px;
+    display: block;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+    border-color: #0070f3;
+    background-color: #fff;
+}
+
+/* 6. Action Areas & Buttons */
+.post-actions, .form-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 15px;
+}
+
+/* Shared Link & Transparent Button Style */
+.post-actions a, 
+.post-actions button,
+.cancel-link,
+.create-link {
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: #007bff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0;
+}
+
+.post-actions button:hover, 
+.cancel-link:hover, 
+.create-link:hover {
+    text-decoration: underline;
+}
+
+/* Specialized Buttons */
+#del-btn {
+    color: #dc3545; /* Red for delete */
+}
+
+.submit-btn {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.submit-btn:hover {
+    opacity: 0.8;
+}

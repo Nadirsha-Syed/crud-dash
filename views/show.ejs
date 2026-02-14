@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details</title>
+    <link rel="stylesheet" href="/style.css">   
+</head>
+<body>
+    <div class="container">
+        <header style="margin-bottom: 24px;">
+            <p style="color: #666; font-size: 0.9rem;">Detailed View</p>
+            <small style="color: #999;">ID: <%= post.id %></small>
+        </header>
+
+        <div class="post">
+            <h3 class="user">@ <%= post.username %></h3>
+            <p class="content"><%= post.content %></p>
+            
+            <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
+                <a href="/posts" style="text-decoration: none; color: #0070f3; font-size: 0.85rem; font-weight: 600;">← Back to all posts</a>
+            </div>
+        </div>   
+    </div>
+</body>
+</html>
